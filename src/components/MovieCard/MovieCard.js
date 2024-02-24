@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import "./MovieCard.scss";
 
 const MovieCard = (props) => {
   const { data } = props;
+ 
   return (
     <div className="card-item">
       <Link to={`/movie/${data.imdbID}`}>
